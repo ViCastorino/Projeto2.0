@@ -12,7 +12,7 @@ btnpaciente.addEventListener('click', function(){
     treze.style.display = 'none';
     x.style.display =  'block';
     y.style.display =  'none';
-    p.style.display =  'none';
+    // p.style.display =  'none';
     console.log('clicou1');
 });
 
@@ -20,16 +20,18 @@ btnorganization.addEventListener('click', function(){
     a.style.display = 'block';
     x.style.display =  'none';
     y.style.display =  'block';
-    p.style.display =  'none';
+    
+    // p.style.display =  'none';
     treze.style.display = 'none';
     console.log('clicou2');
 });
 
-function inicaLogin(loginID) {
-    const login = document.getElementById(loginID);
-    login.classList.add('mostrar');
-}
-const entre =document.querySelector('.secondary');
-entre.addEventListener('click',function(){
-    inicaLogin('login');
-} )
+
+// function inicaLogin(loginID) {
+//     const login = document.getElementById(loginID);
+//     login.classList.add('mostrar');
+// }
+// const entre =document.querySelector('.secondary');
+// entre.addEventListener('click',function(){
+//     inicaLogin('login');
+// } );
