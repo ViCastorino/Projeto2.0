@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
+
+body {
+    background-color: #fff;
+    background-color: white;
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+    grid-template-areas: 'nav nav nav nav''header header header header ''fstSection fstSection fstSection fstSection''scdSection scdSection scdSection scdSection ''footer footer footer footer';
+    grid-template-rows: 10vh 90vh 60vh 60vh 40vh;
+}
+
+/* formatar logo aqui */
+span.logo {
+    font-family: cursive;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto Slab', serif;
+    color: #3A1A53;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    
+}
+
+input {
+    outline-color: #FF5C5A;
+}
+
+/* -----------------------------------------------------------NAV----------------------------------------------------- */
+nav {
+    align-items: center;
+    display: flex;
+    grid-area: nav;
+    justify-content: space-around;
+    color: rgb(19, 19, 19);
+}
+
+/* Aqui ficam os li */
+nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+nav li:hover,
+.secondary:hover {
+    transition: 0.5s;
+    color: #ff6b6b;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* botões primarios: submit e login  */
+.primary {
+    background: #9D5BB2;
+    background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
+    color: white;
+    border-radius: 35px;
+    transition: 0.5s;
+}
+
+.primary:hover {
+    transform: scale(1.1);
+}
+
+
+button,
+input[type=submit] {
+    font-weight: bold;
+    padding: 0 25px;
+    cursor: pointer;
+    outline: none;
+    background-color: inherit;
+}
+
+
+/* ----------------------------------------------------------HEADER-------------------------------- -------*/
+header {
+    background-color: #fff;
+    background-image: url('../img/44.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+    background-position-y: 220px;
+    grid-area: header;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+header input {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* container do titulo e da descrição */
+header .info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* ------------------------------------- BARRA DE PESQUISA ---------------------------------- */
+.search-bar {
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+
+header input {
+    display: inline;
+    height: 50px;
+    outline: none;
+}
+
+header input[type=text] {
+    border-radius: 25px 0 0 25px;
+    padding-left: 20px;
+    width: 400px;
+}
+
+header input[type=submit] {
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    margin-left: -5px;
+    width: 80px;
+}
+
+/* -----------------------------------------------------------SECTION SOBRE----------------------------------------------------- */
+
+section.sobre {
+    text-align: center;
+    grid-area: fstSection;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* O que segura os itens da section sobre */
+div.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Os cards da section sobre */
+div.items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.items img {
+    padding: 15px;
+    border-radius: 40px;
+}
+
+
+/* -----------------------------------------------------------SECTION CONTATO----------------------------------------------------- */
+
+section.contact {
+    grid-area: scdSection;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact input,
+button {
+    display: inline;
+    height: 50px;
+    border: none;
+}
+
+.contact input {
+    outline-color: #27ae60;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 25px;
+    margin: 0;
+    width: 250px;
+}
+
+.contact button {
+    cursor: pointer;
+    width: 100px;
+    margin-left: -10px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #27ae60;
+    color: black;
+}
+
+
+
+
+
+/* -----------------------------------------------------------FOOTER----------------------------------------------------- */
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.social li:hover {
+    transition: 1s;
+}
+
+footer,
+footer h2,
+footer h3 {
+    color: white;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer h3 {
+    text-transform: uppercase;
+}
+
+footer li a:hover {
+    transition: 1s;
+    color: #ff6b6b;
+}
+
+footer {
+    background-color: #3d3d3d;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+footer .footer-card {
+    border-right: 1px solid rgb(66, 66, 66);
+    padding: 0 20px;
+}
+
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------------------------------------login pop-up */
+
+.login-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+}
+
+.login-container.mostrar {
+    display: flex;
+}
+
+.login {
+    background: #9D5BB2;
+    background: -webkit-linear-gradient(top left, #9D5BB2, #EF698C);
+    background: -moz-linear-gradient(top left, #9D5BB2, #EF698C);
+    background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
+    width: 50%;
+    min-width: 300px;
+    padding: 40px;
+    border: 0px solid #9D5BB2;
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px #EF698C;
+    position: relative;
+}
+
+@keyframes login {
+    from {
+        opacity: 0;
+        transform: translate(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0, 0);
+    }
+}
+
+.mostrar .login {
+    animation: login .3s;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    top: -25px;
+    right: -25px;
+    width: 40px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid #EF698C;
+    color: white;
+    background: #9D5BB2;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+
+
+@media(max-width: 760px) {
+    body {
+        font-size: 1.4rem;
+        grid-template-rows: 15vh 60vh 150vh auto auto auto;
+        grid-template-areas: 'nav nav nav nav''header header header header ''fstSection fstSection fstSection fstSection''scdSection scdSection scdSection scdSection ''registrar registrar registrar registrar ''footer footer footer footer';
+    }
+
+    nav a {
+        display: none;
+    }
+
+    header .info-content {
+        align-items: center;
+    }
+
+    header p {
+        text-align: center;
+    }
+
+
+    /* ------------------------- */
+
+    section.sobre {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    section.sobre .sobre-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    div.items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    div.items img {
+        padding: 15px;
+        border-radius: 40px;
+    }
+
+    /* ----------------------------------------------------------------- */
+
+    section.contact {
+        flex-direction: column;
+        padding: 5% 0;
+    }
+
+    .contact p {
+        width: 100%;
+    }
+
+    .contact.form {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact input {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        display: block;
+    }
+
+    iframe {
+        margin-top: 5%;
+    }
+
+    .contact button {
+        margin: 0;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        display: block;
+    }
+
+    /* ============================================================================= */
+
+
+
+
+
+    /* ----------------------------------------------------------------- */
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    footer .footer-card {
+        border: none;
+
+    }
+
+    footer ul li {
+        width: auto;
+    }
+
+    /* ------------------------ */
+
+}
