@@ -40,24 +40,24 @@
         <!-- </div> -->
         <section id="maior">
             <div class="cliente" id="form.a">
-                <form action="/">
+                <form action="/" method="POST">
                     {% csrf_token %}
                     <fieldset>
                         <h2>1. dados pessoais</h2>
                         <div class="d">
                             <span class="c">
-                                <label for="">nome</label><input type="text" name="nome" placeholder="" required />
+                                <label for="">nome</label><input type="text" name="nome" placeholder="" required value="Malia"/>
                             </span>
                             <span class="c">
                                 <label for="">sobrenome</label><input type="text" required name="sobrenome"
-                                    placeholder="" />
+                                    placeholder="" value="Joana"/>
                             </span>
                         </div>
 
                         <div class="d">
                             <span class="c">
                                 <label for="">data de nascimento</label><input type="text" placeholder="dd/mm/aaaa"
-                                    name="data_nasc" id="" required />
+                                    name="data_nasc" id="" required value="031118000"/>
                             </span>
                             <span class="c">
                                 <label for="">genero</label><select name="genero" id="">
@@ -65,8 +65,8 @@
                                     <option value="">Feminino</option>
                                     <option value="">Masculino</option>
                                     <option value="">Não binário</option>
-                                    <option value="">Trans</option>
-                                    <option value="">Outro</option>
+                                    <option value="" >Trans</option>
+                                    <option value="" selected>Outro</option>
                                 </select>
                             </span>
                         </div>
@@ -75,7 +75,7 @@
 
                             <span class="c">
                                 <label for="">telefone</label>
-                                <input type="text" name="telefone" placeholder="telefone">
+                                <input type="text" name="telefone" value="40028922" placeholder="telefone">
                             </span>
 
                             <span class="c">
@@ -93,7 +93,7 @@
                                 <span class="d">
                                     <input type="text" maxlength="9" placeholder="CEP" value="01001000"
                                         class="cep-input" />
-                                    <button class="btn">buscar endereço</button>
+                                    <button type="button" class="btn">buscar endereço</button>
                                 </span>
 
                             </span>
@@ -133,10 +133,10 @@
                         <h2>3. conta</h2>
 
                         <span class="c">
-                            <label for="">email</label> <input type="email" name="email" placeholder="" /></span>
+                            <label for="">email</label> <input type="email" name="email" value="majo@gmail.com" placeholder="" /></span>
                         <span class="c">
                             <label for="">senha</label>
-                            <input type="password" placeholder="" name="senha" />
+                            <input type="password" placeholder="" value="123" name="senha" />
                         </span>
 
 
@@ -146,7 +146,7 @@
             </div>
 
             <div class="organization" id="form.b">
-                <form action="/">
+                <form action="/" method="POST">
                     {% csrf_token %}
                     <fieldset>
                         <h2>1. dados pessoais</h2>

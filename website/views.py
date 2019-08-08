@@ -42,10 +42,11 @@ def cadastro(request):
                paciente.save()
                contexto= {'msg':f'Boas vindas, {paciente.nome}! Aproveite o site :) '}
                print(f'{paciente.nome} foi cadastrado')
-               return  render(request, 'login.html', contexto)
+               return  redirect(request, '/login', contexto)
           
           else:
                contexto = {'msg':f'Parece que este email já está sendo utilizado :('}
+               print('error')
                return render(request, 'cadastro.html', contexto)
      return render(request, 'cadastro.html', {})
 
