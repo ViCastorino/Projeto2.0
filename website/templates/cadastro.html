@@ -8,9 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/style.css">
-
     <link rel="stylesheet" href="static/css/style2.css">
-
     <script src="/static/js/scripts.js" defer></script>
     <script src="/static/js/buscarCEP.js" defer></script>
     <script src="/static/js/validarCPF.js" defer></script>
@@ -26,6 +24,7 @@
                     <input type="image" class="btnSeleciona" id="first" src="/static/img/pacient.png" draggable="false">
                     <p>Paciente</p>
                 </div>
+
                 <div class="master">
                     <input type="image" class="btnSeleciona" id="second" src="/static/img/predio.png" draggable="false">
                     <p>Instituição</p>
@@ -36,16 +35,16 @@
         <!-- </div> -->
         <section id="maior">
             <div class="cliente" id="form.a">
-                <form action="/" method="POST">
+                <form action="/cadastro" method="POST">
                     {% csrf_token %}
                     <fieldset>
-                        <h2>1. dados pessoais</h2>
+                        <h2>1. Dados Pessoais</h2>
                         <div class="d">
                             <span class="c">
-                                <label for="">nome</label><input type="text" name="nome" placeholder="" required value="Malia"/>
+                                <label for="">Nome</label><input type="text" name="nome" placeholder="" required value="Malia"/>
                             </span>
                             <span class="c">
-                                <label for="">sobrenome</label><input type="text" required name="sobrenome"
+                                <label for=""> Sobrenome </label><input type="text" required name="sobrenome"
                                     placeholder="" value="Joana"/>
                             </span>
                         </div>
@@ -53,16 +52,14 @@
                         <div class="d">
                             <span class="c">
                                 <label for="">data de nascimento</label>
-                                <input type="text" placeholder="dd/mm/aaaa" name="data_nasc" required />
+                                <input type="date" placeholder="dd/mm/aaaa" name="data_nasc" required />
                             </span>
                             <span class="c">
-                                    <label>genero</label>  <select name="genero">
+                                    <label> Gênero</label>  <select name="genero">
                                     <option value="">Selecione</option>
-                                    <option value="">Feminino</option>
-                                    <option value="">Masculino</option>
-                                    <option value="">Não binário</option>
-                                    <option value="" >Trans</option>
-                                    <option value="" selected>Outro</option>
+                                    <option value="F">Feminino</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="O">Outro</option>
                                 </select>
                             </span>
                         </div>
@@ -71,7 +68,7 @@
 
                             <span class="c">
                                 <label for="">telefone</label>
-                                <input type="text" name="telefone" value="40028922" placeholder="telefone">
+                                <input type="text" name="telefone" placeholder="telefone">
                             </span>
 
                             <span class="c">
@@ -82,13 +79,13 @@
                     </fieldset>
 
                     <fieldset>
-                        <h2>2. endereço</h2>
+                        <h2> 2. Endereço</h2>
                         <div class="d">
                             <span class="c">
                                 <label for="">cep</label>
                                 <span class="d">
-                                    <input type="text" maxlength="9" placeholder="CEP" value="01001000"
-                                        class="cep-input" />
+                                    <input type="text" maxlength="9"  placeholder="CEP"
+                                        class="cep-input" name="cep" />
                                     <button type="button" class="btn">buscar endereço</button>
                                 </span>
 
@@ -115,7 +112,7 @@
                                 <label for="">bairro</label> <input name="bairro" type="text" placeholder="" />
                             </span>
                             <span class="c">
-                                <label for="">cidade</label> <input type="text" name="municipio" placeholder="" />
+                                <label for="">cidade</label> <input type="text" name="cidade" placeholder="" />
                             </span>
 
                             <span class="c">
@@ -126,10 +123,10 @@
                     </fieldset>
 
                     <fieldset>
-                        <h2>3. conta</h2>
+                        <h2> 3. Conta</h2>
 
                         <span class="c">
-                            <label for="">email</label> <input type="email" name="email" value="majo@gmail.com" placeholder="" /></span>
+                            <label for="">email</label> <input type="email" name="email" placeholder="exemplo@gmail.com"/></span>
                         <span class="c">
                             <label for="">senha</label>
                             <input type="password" placeholder="" value="123" name="senha" />
@@ -142,7 +139,7 @@
             </div>
 
             <div class="organization" id="form.b">
-                <form action="/" method="POST">
+                <form action="/cadastro" method="POST">
                     {% csrf_token %}
                     <fieldset>
                         <h2>1. dados pessoais</h2>

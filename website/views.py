@@ -22,12 +22,13 @@ def cadastro(request):
 
           # checar se o email já está cadastrado
           email_digitado = request.POST.get('email')
-          em_uso = Pessoa.objects.filter(email = email_digitado).first()
-
+          em_uso = Paciente.objects.filter(email = email_digitado).first()
+          print('ta funcionando')
           if(em_uso is None):
+               print('ta jkjjh')
                paciente.nome = request.POST.get('nome')
                paciente.sobrenome = request.POST.get('sobrenome')
-               paciente.data_nasc = request.POST.get('data-nasc')
+               paciente.data_nasc = request.POST.get('data_nasc')
                paciente.genero = request.POST.get('genero')
                paciente.cpf = request.POST.get('cpf')
                paciente.telefone= request.POST.get('telefone')
@@ -39,10 +40,12 @@ def cadastro(request):
                paciente.uf = request.POST.get('uf')
                paciente.email = request.POST.get('email')
                paciente.senha = request.POST.get('senha')
+               print(paciente)
                paciente.save()
+               print(paciente)
                contexto= {'msg':f'Boas vindas, {paciente.nome}! Aproveite o site :) '}
                print(f'{paciente.nome} foi cadastrado')
-               return  redirect(request, '/login', contexto)
+               return  render(request, '/login', contexto)
           
           else:
                contexto = {'msg':f'Parece que este email já está sendo utilizado :('}

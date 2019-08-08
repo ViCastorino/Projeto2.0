@@ -3,7 +3,6 @@ from django.db import models
 # Create your models here.
 
 class Paciente(models.Model):
-    
     GENEROS =(
         ('F', 'Feminino'),
         ('M', 'Masculino'),
@@ -13,6 +12,11 @@ class Paciente(models.Model):
     nome = models.CharField(
         max_length = 255,
         verbose_name= 'Nome'
+    )
+
+    data_nasc = models.CharField(
+        max_length= 255,
+        verbose_name= 'Data de Nascimento'
     )
 
     sobrenome = models.CharField(
@@ -36,6 +40,34 @@ class Paciente(models.Model):
     telefone = models.CharField(
         max_length= 255,
         verbose_name= 'Telefone Fixo'
+    )
+
+    cep = models.CharField(
+        max_length= 255,
+        verbose_name= 'CEP'
+    )
+    rua = models.CharField(
+        max_length= 255,
+        verbose_name= 'Rua'
+    )
+
+    complemento= models.CharField(
+        max_length= 255,
+        verbose_name= 'complemento'
+    )
+
+    bairro = models.CharField(
+        max_length= 255,
+        verbose_name= 'bairro'
+    )
+    cidade= models.CharField(
+        max_length= 255,
+        verbose_name= 'Cidade'
+    )
+    
+    uf = models.CharField(
+        max_length= 255,
+        verbose_name= 'Uf'
     )
 
     email = models.EmailField(
