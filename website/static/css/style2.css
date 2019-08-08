@@ -1,3 +1,7 @@
+* {
+    border: none;
+}
+
 .pagecadastro {
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@
     background-position-x: -200px;
     background-repeat: no-repeat; */
     background-color: #3d3d3d;
+    font-family: sans-serif;
 }
 
 label {
@@ -86,15 +91,13 @@ form button{
     background-color: white;
 }
 
-.btnSeleciona:hover {}
-
-#forma.a {
+#form.a {
     display: none;
     display: flex;
     justify-content: space-around;
 }
 
-#forma.b {
+#form.b {
     display: none;
     display: flex;
     justify-content: space-around;
@@ -115,7 +118,7 @@ form button{
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .land {
@@ -179,4 +182,29 @@ form button{
 
 h2 {
     font-family: 'Varela Round', sans-serif;
+}
+
+input,
+option,
+select {
+    box-shadow: 1px 1px 1px 2px #3333333b;
+    padding-left: 15px;
+    height: 30px;
+}
+
+.c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.d {
+    display: flex;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
