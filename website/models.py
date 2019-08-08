@@ -7,6 +7,8 @@ class Paciente(models.Model):
     GENEROS =(
         ('F', 'Feminino'),
         ('M', 'Masculino'),
+        ('NB',  'Não Binário')
+        ('T',  'Trans')
         ('O',  'Outros')
     )
 
@@ -38,6 +40,41 @@ class Paciente(models.Model):
         verbose_name= 'Telefone Fixo'
     )
 
+    cep = models.Charfield(
+        max_length=255,
+        verbose_name='CEP'
+    )
+
+    
+    rua = models.Charfield(
+        max_length=255,
+        verbose_name='rua'
+    )
+
+    
+    complemento = models.Charfield(
+        max_length=255,
+        verbose_name='complemento'
+    )
+
+    
+    bairro = models.Charfield(
+        max_length=255,
+        verbose_name='bairro'
+    )
+
+    
+    cidade = models.Charfield(
+        max_length=255,
+        verbose_name='cidade'
+    )
+
+    
+    uf = models.Charfield(
+        max_length=2,
+        verbose_name='UF'
+    )
+
     email = models.EmailField(
         max_length= 255,
         verbose_name= 'Email'
@@ -47,6 +84,10 @@ class Paciente(models.Model):
         max_length = 255,
         verbose_name='Senha'
     )
+
+    data_de_criacao = models.DateTimeField( auto_now_add = True  ) 
+
+    ativo = models.BooleanField( default = True)
 
     def __str__(self):
         return self.nome + ' ' + self.sobrenome
@@ -102,7 +143,7 @@ class Instituicao(models.Model):
     )
     
     uf = models.CharField(
-        max_length=100,
+        max_length=2,
         verbose_name='UF'
     )
 
@@ -110,6 +151,10 @@ class Instituicao(models.Model):
         max_length = 8,
         verbose_name='Senha'
     )
+
+    data_de_criacao = models.DateTimeField( auto_now_add = True  ) 
+
+    ativo = models.BooleanField( default = True)
 
     def __str__(self):
         return self.nome_empresa + ' ' + self.cnpj
