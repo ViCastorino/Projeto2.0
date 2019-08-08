@@ -47,7 +47,7 @@ function renderEndereco($cep){
     document.querySelector('[name="rua"]').value = endereco.logradouro,
     document.querySelector('[name="complemento"]').value = endereco.complemento,
     document.querySelector('[name="bairro"]').value = endereco.bairro,
-    document.querySelector('[name="municipio"]').value = endereco.localidade,
+    document.querySelector('[name="cidade"]').value = endereco.localidade,
     document.querySelector('[name="uf"]').value = endereco.uf
    )
   }
