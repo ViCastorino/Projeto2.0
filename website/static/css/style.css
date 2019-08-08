@@ -28,8 +28,7 @@ h2 {
 }
 
 h1 {
-    font-size: 2.5rem;
-    
+    font-size: 2.5rem;    
 }
 
 input {
@@ -43,6 +42,7 @@ nav {
     grid-area: nav;
     justify-content: space-around;
     color: rgb(19, 19, 19);
+    background-color: #EAE6FF;
 }
 
 /* Aqui ficam os li */
@@ -87,7 +87,7 @@ input[type=submit] {
 
 /* ----------------------------------------------------------HEADER-------------------------------- -------*/
 header {
-    background-color: #fff;
+    background-color: #EAE6FF;
     background-image: url('../img/44.jpg');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -118,6 +118,7 @@ header .info-content {
     margin-top: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 6px -6px #777;
+    background-color: white;
 }
 
 
@@ -160,14 +161,16 @@ div.sobre-content {
 
 /* Os cards da section sobre */
 div.items {
+    padding: 15px;
+
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 div.items img {
-    padding: 15px;
-    border-radius: 40px;
+    height: 60px;
+
 }
 
 
