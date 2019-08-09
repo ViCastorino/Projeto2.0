@@ -16,7 +16,7 @@
 </head>
 
 <body class="pagecadastro">
-    
+                                   -------- BOTÕES -----------
     <div class="registrar" id="4">
         <div class="ordem" id="treze">
 
@@ -35,6 +35,7 @@
         <!-- </div> -->
         <section id="maior">
             <div class="cliente" id="form.a">
+            
                 <form action="/cadastro" method="POST">
                     {% csrf_token %}
                     <fieldset>

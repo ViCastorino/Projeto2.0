@@ -81,7 +81,8 @@ class Paciente(models.Model):
     )
 
     def __str__(self):
-        return self.nome + ' ' + self.sobrenome
+        return self.nome + str(' ') + self.sobrenome
+        
 
 
 class Instituicao(models.Model):
@@ -141,11 +142,11 @@ class Instituicao(models.Model):
     )
 
     senha = models.CharField(
-        max_length = 8,
+        max_length = 255,
         verbose_name='Senha'
     )
 
-    # def __str__(self):
-    #     return self.nome_empresa + ' ' + self.cnpj
+    def __str__(self):
+        return self.nome_empresa + str(' ') + self.cnpj
 
     

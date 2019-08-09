@@ -1,95 +1,112 @@
-{% extends 'shared/layout.html' %}
+{% extends 'shared/layout2.html' %}
 
 {% block conteudo %}
 <form class="paciente" action="/cadastro" method="POST">
     {% csrf_token %}
 
-    <label> Nome </label>
-    <input type="text" name="nome" required>
+    <div class="column1">
+        <h1> 1.Dados Pessoais </h1>
+        <label> Nome </label>
+        <input type="text" name="nome" required>
 
-    <label> Sobrenome </label>
-    <input type="text" name="sobrenome" required>
 
-    <label> Data de Nascimento </label>
-    <input type="date" name="data_nasc" required>
+        <label> Sobrenome </label>
+        <input type="text" name="sobrenome" required>
 
-    <label> Gênero </label>
-    <select name="genero" required>
-        <option value="#"> Selecione </option>
-        <option value="F"> Feminino </option>
-        <option value="M"> Masculino </option>
-        <option value="O"> Outros </option>
-    </select>
+        <label> Data de Nascimento </label>
+        <input type="date" name="data_nasc" prequired>
 
-    <label> CPF </label>
-    <input type="text" name="cpf" placeholder="327.167.865-12" required>
+        <label> Gênero </label>
+        <select name="genero" required>
+            <option value="#"> Selecione </option>
+            <option value="F"> Feminino </option>
+            <option value="M"> Masculino </option>
+            <option value="O"> Outros </option>
+        </select>
 
-    <label> Telefone </label>
-    <input type="text" name="telefone" placeholder="96342-6101" required>
+        <label> CPF </label>
+        <input type="text" name="cpf" placeholder="Ex: 327.167.865-12" maxlength='11' required>
 
-    <label> CEP </label>
-    <input type="text" name="cep" placeholder='02873-000' required>
+        <label> Telefone </label>
+        <input type="text" name="telefone" placeholder="Ex: 96342-6101" maxlength="11" required>
+    </div>
 
-    <label> Rua </label>
-    <input type="text" name="rua" required>
+    <div class="column2">
+        <h1> 2.Endereço </h1>
+        <label> CEP </label>
+        <input type="text" name="cep" placeholder='Ex: 02873-000' maxlength="8" required>
 
-    <label> Complemento </label>
-    <input type="text" name="complemento"  placeholder='Casa'>
+        <label> Rua </label>
+        <input type="text" name="rua" required>
 
-    <label> Bairro </label>
-    <input type="text" name="bairro" required>
+        <label> Complemento </label>
+        <input type="text" name="complemento" placeholder=' Ex:Casa'>
 
-    <label> Cidade </label>
-    <input type="text" name="cidade" required>
+        <label> Bairro </label>
+        <input type="text" name="bairro" required>
 
-    <label> UF </label>
-    <input type="text" name="uf" >
+        <label> Cidade </label>
+        <input type="text" name="cidade" required>
 
-    <label> Email </label>
-    <input type="text" name="email" required>
+        <label> UF </label>
+        <input type="text" name="uf" placeholder="Ex:SP">
+    </div>
 
-    <label> Senha </label>
-    <input type="password" name="senha" maxlength="8">
+    <div class="column3">
+        <h1> 3.Email </h1>
+        <label> Email </label>
+        <input type="text" name="email" required>
 
-    <input type="submit" value="Cadastrar">
+        <label> Senha </label>
+        <input type="password" name="senha" minlength='5' maxlength="8">
 
+        <input type="submit" value="Cadastrar">
+    </div>
 </form>
+
+
 
 <form class="instituicao" action="/cadastro" method="POST">
     {% csrf_token %}
 
-    <label> Nome da Empresa </label>
-    <input type="text" name="nome-empresa" required>
+    <div class="column1">
+        <label> Nome da Empresa </label>
+        <input type="text" name="nome_empresa" required>
 
-    <label> CNPJ </label>
-    <input type="text" name="cnpj" required>
+        <label> CNPJ </label>
+        <input type="text" name="cnpj" required>
 
-    <label> Telefone Comercial </label>
-    <input type="text" name="telefone_comercial" placeholder="96342-6101" required>
+        <label> Telefone Comercial </label>
+        <input type="text" name="telefone_comercial" placeholder="Ex:96342-6101" required>
+    </div>
 
-    <label> CEP </label>
-    <input type="text" name="cep" placeholder='02873-000' required>
+    <div class="column2">
+        <label> CEP </label>
+        <input type="text" name="cep" placeholder='Ex: 02873-000' required>
 
-    <label> Rua </label>
-    <input type="text" name="rua" required>
+        <label> Rua </label>
+        <input type="text" name="rua" required>
 
-    <label> Complemento </label>
-    <input type="text" name="complemento"  placeholder='Casa'>
+        <label> Complemento </label>
+        <input type="text" name="complemento" placeholder='Ex:Casa'>
 
-    <label> Bairro </label>
-    <input type="text" name="bairro" required>
+        <label> Bairro </label>
+        <input type="text" name="bairro" required>
 
-    <label> Cidade </label>
-    <input type="text" name="cidade" required>
+        <label> Cidade </label>
+        <input type="text" name="cidade" required>
 
-    <label> UF </label>
-    <input type="text" name="uf" >
+        <label> UF </label>
+        <input type="text" name="uf">
+    </div>
 
-    <label> Email Comercial </label>
-    <input type="text" name="email_comercial" required>
+    <div class="column3">
+        <label> Email Comercial </label>
+        <input type="text" name="email_comercial" required>
 
-    <label> Senha </label>
-    <input type="password" name="senha" maxlength="8">
+        <label> Senha </label>
+        <input type="password" name="senha" maxlength="8">
+    </div>
 
     <input type="submit" value="Cadastrar">
 

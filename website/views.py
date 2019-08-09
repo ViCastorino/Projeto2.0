@@ -10,10 +10,6 @@ def login(request):
     contexto= {}
     return render( request, 'login.html', contexto)
 
-def sobre(request):
-    contexto= {}
-    return render( request, 'sobre.html', contexto)
-
 # função de cadastrar cliente
 def cadastro(request):
      contexto= {}
@@ -23,10 +19,8 @@ def cadastro(request):
           # checar se o email já está cadastrado
           email_digitado = request.POST.get('email')
           em_uso = Paciente.objects.filter(email = email_digitado).first()
-          print('ta funcionando')
-
+     
           if(em_uso is None):
-               print('ta jkjjh')
                paciente.nome = request.POST.get('nome')
                paciente.sobrenome = request.POST.get('sobrenome')
                paciente.data_nasc = request.POST.get('data_nasc')
@@ -47,7 +41,7 @@ def cadastro(request):
                contexto= {'msg':f'Boas vindas, {paciente.nome}! Aproveite o site :) '}
                print(f'{paciente.nome} foi cadastrado')
                return  render(request, 'login.html', contexto)
-          # return render(request, 'cadastro.html', contexto)
+
           else:
                contexto = {'msg':f'Parece que este email já está sendo utilizado :('}
                print('error')
@@ -58,6 +52,7 @@ def cadastro(request):
 def cadastro_instituicao(request):
      contexto={ }
      if request.method == 'POST':
+        instituicao = Instituicao()
         
         email_digitado_inst = request.POST.get('email')
         em_uso_inst = Pessoa.objects.filter(email = email_digitado_inst).first()
@@ -75,6 +70,7 @@ def cadastro_instituicao(request):
           instituicao.uf = request.POST.get ('uf')
           instituicao.senha = request.POST.get ('senha')
           instituicao.save()
+          return  render(request, 'login.html', contexto)
      
         else:
           contexto= {'msg':f'Ooops, parece que já cadastraram esse email'}
