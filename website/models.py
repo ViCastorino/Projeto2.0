@@ -95,47 +95,49 @@ class Instituicao(models.Model):
 
     cnpj = models.CharField(
         max_length = 255,
-        verbose_name = 'CNPJ'
-    )
-    
-    email_comercial = models.EmailField(
-        max_length=255,
-        verbose_name='E-mail Comercial'
-    )
-
-    cep = models.CharField(
-        max_length=9,
-        verbose_name='Endereço'
-    )
-    cnpj = models.CharField(
-        max_length=9,
-        verbose_name='cnpj',
+        verbose_name = 'CNPJ',
         null= True,
         blank = True
     )
+
+    telefone_comercial = models.CharField(
+        max_length= 255,
+        verbose_name='Telefone Comercial',
+    )
+    
+    cep = models.CharField(
+        max_length=255,
+        verbose_name='Endereço'
+    )
+
     rua = models.CharField(
-        max_length=100,
+        max_length=255,
         verbose_name='Endereço'
     )
     
     complemento = models.CharField(
-        max_length=6,
+        max_length=255,
         verbose_name='Complemento'
     )
         
     bairro = models.CharField(
-        max_length=100,
+        max_length= 255,
         verbose_name='Bairro'
     )
 
     municipio = models.CharField(
-        max_length=50,
+        max_length=255,
         verbose_name='Município'
     )
     
     uf = models.CharField(
-        max_length=100,
+        max_length=255,
         verbose_name='UF'
+    )
+
+    email_comercial = models.EmailField(
+        max_length=255,
+        verbose_name='E-mail Comercial'
     )
 
     senha = models.CharField(
@@ -143,7 +145,7 @@ class Instituicao(models.Model):
         verbose_name='Senha'
     )
 
-    def __str__(self):
-        return self.nome_empresa + ' ' + self.cnpj
+    # def __str__(self):
+    #     return self.nome_empresa + ' ' + self.cnpj
 
     

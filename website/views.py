@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from website.models import Instituicao, Paciente
+from  website.models import Paciente, Instituicao
 
 # Create your views here.
 def index(request):
@@ -24,6 +24,7 @@ def cadastro(request):
           email_digitado = request.POST.get('email')
           em_uso = Paciente.objects.filter(email = email_digitado).first()
           print('ta funcionando')
+
           if(em_uso is None):
                print('ta jkjjh')
                paciente.nome = request.POST.get('nome')
@@ -45,8 +46,8 @@ def cadastro(request):
                print(paciente)
                contexto= {'msg':f'Boas vindas, {paciente.nome}! Aproveite o site :) '}
                print(f'{paciente.nome} foi cadastrado')
-               return  render(request, '/login', contexto)
-          
+               return  render(request, 'login.html', contexto)
+          # return render(request, 'cadastro.html', contexto)
           else:
                contexto = {'msg':f'Parece que este email já está sendo utilizado :('}
                print('error')
