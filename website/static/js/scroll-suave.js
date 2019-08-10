@@ -51,3 +51,23 @@ function smoothScroll(target, duration) {
 
  requestAnimationFrame(animation)
 }
+// ----------------------------modal login ----------------------
+
+let login = document.getElementById('modal');
+let entre = document.getElementById('entre');
+let feche = document.getElementById('fechar');
+
+function inicaLogin() {
+    login.style.display = 'flex';
+    console.log('ok baby');
+}
+function fecharLogin(){
+    login.style.display ='none';
+}
+entre.onclick( function() {
+    inicaLogin();
+});
+
+feche.onclick(function(){
+    fecharLogin();
+})

@@ -268,7 +268,7 @@ footer .footer-card {
     flex-direction: column;
 }
 
-/* ----------------------------------------------login pop-up */
+/* ----------------------------------------------login modal */
 
 .login-container {
     display: none;
@@ -281,10 +281,6 @@ footer .footer-card {
     top: 0px;
     left: 0px;
     z-index: 2000;
-}
-
-.login-container.mostrar {
-    display: flex;
 }
 
 .login {
