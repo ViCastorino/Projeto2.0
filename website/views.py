@@ -52,29 +52,27 @@ def cadastro(request):
 def cadastro_instituicao(request):
      contexto={ }
      if request.method == 'POST':
-        instituicao = Instituicao()
-        
-        email_digitado_inst = request.POST.get('email')
-        em_uso_inst = Pessoa.objects.filter(email = email_digitado_inst).first()
-          
-        if(em_uso is None):
           instituicao = Instituicao()
-          instituicao.nome_empresa = request.POST.get('nome_empresa')
-          instituicao.email_comercial = request.POST.get('email_comercial')
-          instituicao.cnpj = request.POST.get('cnpj') 
-          instituicao.cep = request.POST.get('cep')
-          instituicao.rua = request.POST.get('rua')
-          instituicao.complemento = request.POST.get('complemento')
-          instituicao.bairro = request.POST.get ('bairro')
-          instituicao.municipio = request.POST.get ('municipio')
-          instituicao.uf = request.POST.get ('uf')
-          instituicao.senha = request.POST.get ('senha')
-          instituicao.save()
-          return  render(request, 'login.html', contexto)
-     
-        else:
-          contexto= {'msg':f'Ooops, parece que já cadastraram esse email'}
-          return  render(request, 'login.html', contexto)
-        
+          
+          email_digitado_inst = request.POST.get('email_comercial')
+          em_uso_inst = Instituicao.objects.filter(email_comercial = email_digitado_inst).first()
+          print('funcionou')
+          
+          if(em_uso_inst is None):
+               print('ta funcionando')
+               instituicao.nome_empresa = request.POST.get('nome_empresa')
+               instituicao.email_comercial = request.POST.get('email_comercial')
+               instituicao.cnpj = request.POST.get('cnpj') 
+               instituicao.cep = request.POST.get('cep')
+               instituicao.rua = request.POST.get('rua')
+               instituicao.complemento = request.POST.get('complemento')
+               instituicao.bairro = request.POST.get ('bairro')
+               instituicao.uf = request.POST.get ('uf')
+               instituicao.senha = request.POST.get ('senha')
+               instituicao.save()
+               return  render(request, 'login.html', contexto)
+          else:
+               contexto= {'msg':f'Ooops, parece que já cadastraram esse email'}
+               return  render(request, 'login.html', contexto)
      return render( request, 'index.html', contexto)
 

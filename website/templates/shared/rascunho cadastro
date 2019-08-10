@@ -85,8 +85,7 @@
                             <span class="c">
                                 <label for="">cep</label>
                                 <span class="d">
-                                    <input type="text" maxlength="9"  placeholder="CEP"
-                                        class="cep-input" name="cep" />
+                                    <input type="text" maxlength="9"  placeholder="CEP" class="cep-input" name="cep" />
                                     <button type="button" class="btn">buscar endereço</button>
                                 </span>
 

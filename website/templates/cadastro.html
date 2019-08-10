@@ -5,7 +5,7 @@
     {% csrf_token %}
 
     <div class="column1">
-        <h1> 1.Dados Pessoais </h1>
+        <h2> 1.Dados Pessoais </h2>
         <label> Nome </label>
         <input type="text" name="nome" required>
 
@@ -25,16 +25,17 @@
         </select>
 
         <label> CPF </label>
-        <input type="text" name="cpf" placeholder="Ex: 327.167.865-12" maxlength='11' required>
+        <input type="text" name="cpf" maxlength='11' required>
 
         <label> Telefone </label>
         <input type="text" name="telefone" placeholder="Ex: 96342-6101" maxlength="11" required>
     </div>
 
     <div class="column2">
-        <h1> 2.Endereço </h1>
+        <h2> 2.Endereço </h2>
         <label> CEP </label>
-        <input type="text" name="cep" placeholder='Ex: 02873-000' maxlength="8" required>
+        <input class='cep-input' type="text" name="cep" placeholder='Ex: 02873-000' maxlength="9" required>
+        <button class='btn'type='button' > Buscar Endereço </button>
 
         <label> Rua </label>
         <input type="text" name="rua" required>
@@ -53,23 +54,24 @@
     </div>
 
     <div class="column3">
-        <h1> 3.Email </h1>
+        <h2> 3.Conta</h2>
         <label> Email </label>
-        <input type="text" name="email" required>
+        <input type="email" name="email" required>
 
         <label> Senha </label>
         <input type="password" name="senha" minlength='5' maxlength="8">
 
-        <input type="submit" value="Cadastrar">
+        <input class='button' type="submit" value="Cadastrar">
     </div>
 </form>
 
 
 
-<form class="instituicao" action="/cadastro" method="POST">
+<form class="instituicao" action="/cadastro_instituicao" method="POST">
     {% csrf_token %}
 
     <div class="column1">
+        <h2> 1.Dados da Empresa </h2>
         <label> Nome da Empresa </label>
         <input type="text" name="nome_empresa" required>
 
@@ -81,8 +83,10 @@
     </div>
 
     <div class="column2">
+        <h2> 2.Endereço </h2>
         <label> CEP </label>
-        <input type="text" name="cep" placeholder='Ex: 02873-000' required>
+        <input class='cep-input' type="text" name="cep" placeholder='Ex: 02873-000' maxlength="9" required>
+        <button class='btn'type='button' > Buscar Endereço </button>
 
         <label> Rua </label>
         <input type="text" name="rua" required>
@@ -101,14 +105,14 @@
     </div>
 
     <div class="column3">
+        <h2> 3.Conta </h2>
         <label> Email Comercial </label>
         <input type="text" name="email_comercial" required>
 
         <label> Senha </label>
         <input type="password" name="senha" maxlength="8">
+        <input class='button'type="submit" value="Cadastrar">
     </div>
-
-    <input type="submit" value="Cadastrar">
 
 </form>
 

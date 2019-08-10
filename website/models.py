@@ -81,7 +81,7 @@ class Paciente(models.Model):
     )
 
     def __str__(self):
-        return self.nome + str(' ') + self.sobrenome
+        return self.nome + ' ' + self.sobrenome
         
 
 
@@ -147,6 +147,6 @@ class Instituicao(models.Model):
     )
 
     def __str__(self):
-        return self.nome_empresa + str(' ') + self.cnpj
+        return self.nome_empresa + ' ' + self.cnpj
 
     
