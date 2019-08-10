@@ -68,6 +68,8 @@ nav li:hover,
     transition: 0.5s;
 }
 
+
+
 .primary:hover {
     transform: scale(1.1);
 }
@@ -86,7 +88,7 @@ input[type=submit] {
 /* ----------------------------------------------------------HEADER-------------------------------- -------*/
 header {
     background-color: #EAE6FF;
-    background-image: url('../img/44.jpg');
+    background-image: url('../img/44.svg');
     background-repeat: no-repeat;
     background-position-x: center;
 
