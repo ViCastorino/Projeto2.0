@@ -8,7 +8,8 @@
  }
 
  /*------- style do form -----*/
- .paciente,.instituicao{
+ form{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,16 +17,18 @@
     justify-content: center;
     width: 60%;
     height: 500px;
-    margin-bottom: 10px;
-    
+    left:20%; 
+    margin: 10px;   
 }
+
 
 /*---- ----- colocar  em colunas  -----*/
 .column1, .column2, .column3{
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding:35px;
     font-size: 0.6rem;
+
 }
 
 /*----------- style das labels -----*/
@@ -38,6 +41,12 @@ label {
     color: rgba(24, 24, 24, 0.767);
 }
 
+h2{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.4rem;
+    color: #3a1a53;
+}
+
 
 input, option, select{
     height: 30px;
@@ -46,7 +55,19 @@ input, option, select{
 }
 
 /*---- style do botao de cadastro -----*/
+
 .button{
+    background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    border-radius: 35px;
+    transition: 0.5s;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+/* .button{
     color: #fff;
     background-color: #1289A7;
     border-radius: 35px;
@@ -60,7 +81,7 @@ input, option, select{
     margin-top: 15px;
     font-family: 'Varela Round', sans-serif;
     transition: .2s;
-}
+} */
 
 /*----------- botao de buscar cpf ---------*/
 .btn{
@@ -71,31 +92,6 @@ input, option, select{
     cursor: pointer;
     
 }
-
-.button:hover {
-    animation-name: botaocadastro;
-    animation-delay: .1s;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1
-}
-
-@keyframes botaocadastro {
-    0% {
-        transform: rotateX(0);
-    }
-
-    50% {
-        transform: rotateX(180deg);
-    }
-
-    100% {
-        transform: rotateX(0);
-    }
-}
-
-
-
 
 /* 
 ------ estiliza os forms -----
