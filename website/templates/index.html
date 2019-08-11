@@ -3,8 +3,6 @@
 {% block conteudo %}
 
 <body>
-    <script src="{% static 'js/scroll-suave.js' %}" defer></script>
-
     <nav>
         <span class="logo">logo bonitão</span>
         <ul>
@@ -14,7 +12,7 @@
 
             <div class="buttons">
                 <a href="cadastro"><button class="primary">cadastre-se</button></a>
-                <button id="entre" class="secondary">entre</button>
+                <button id="btnmostar" class="btnmostar">entre</button>
             </div>
         </ul>
     </nav>
@@ -22,7 +20,7 @@
     <header>
         <div class="info-content">
             <h1>titulo de um site sobre etc etc </h1>
-            <p>A great new free psd theme to showcase your new aplication.</p>
+            <p>Como podemos te ajudar hoje?</p>
             <form class="search-bar" action="/">
                 {% csrf_token %}
                 <input class="text input" name=`search-bar` type="text" name="" id="" placeholder="onde você está?">
@@ -37,19 +35,19 @@
             <div class="items">
                 <img src="{% static 'img/video-call.svg' %}" alt="">
                 <h2>Editable Theme</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>VAMOS FAZER ESSE TEXTINHO GALERIS</p>
             </div>
             <hr>
             <div class="items">
                 <img src="{% static 'img/heart.svg' %}" alt="">
                 <h2>Flat Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>VAMOS FAZER ESSE TEXTINHO GALERIS</p>
             </div>
             <hr>
             <div class="items">
                 <img src="{% static 'img/map-location.svg' %}" alt="">
                 <h2>Reach your audience</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>VAMOS FAZER ESSE TEXTINHO GALERIS</p>
             </div>
             <hr>
         </div>
@@ -61,16 +59,10 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisic Lorem ipsum, dolor sit amet consectetur adipisic</p>
             <span class="input">
                 <input type="text" placeholder="email adress">
-                <button>Notify</button>
+                <button>Demoday</button>
             </span>
         </div>
     </section>
-
-
-
-
-
-
 
     <footer>
         <div class="footer-card">
@@ -110,16 +102,16 @@
         <footer></footer>
         <div id="modal" class="login-container">
             <div class="login">
-                <button class="fechar">x</button>
-                <h2>Entre</h2>
+                <button class="btnfechar">x</button>
+                <h2 class="h2-login">Entre</h2>
                 <form action="/">
                     {% csrf_token %}
                     <p>Digite seu e-mail:</p>
-                    <input type="email">
+                    <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
                     <p>Digite sua senha:</p>
                     <input type="password">
                     <p></p>
-                    <input type="button" value="Entrar">
+                    <input class="entrarbtn" type="button" value="Entrar  ">
                 </form>
             </div>
 

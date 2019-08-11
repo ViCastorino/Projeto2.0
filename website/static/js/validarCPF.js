@@ -7,7 +7,6 @@
  /* 
  O replace é uma método de string que substitui o primeiro parâmetro pelo segundo.  
  /\D/g que é uma expressão regular que seleciona tudo que não for um valor numérico 
- Veja mais aqui https://regex101.com/r/9iNvjU/2  
  Aqui ele vai substituir por um nada '', ou seja, o usuário não vai conseguir digitar texto nesse campo
  */
   inputCPF.value = inputCPF.value.replace(/\D/g, "");

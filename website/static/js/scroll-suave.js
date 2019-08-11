@@ -1,4 +1,3 @@
-
 (function(){
  /*
   Seleciona os <a> da nav, quando cada um for clicado, de forma suave,
@@ -54,20 +53,16 @@ function smoothScroll(target, duration) {
 // ----------------------------modal login ----------------------
 
 let login = document.getElementById('modal');
-let entre = document.getElementById('entre');
-let feche = document.getElementById('fechar');
+let mostrar = document.querySelector('.btnmostar');
+let feche = document.querySelector('.btnfechar');
 
-function inicaLogin() {
+function inicarLogin() {
     login.style.display = 'flex';
     console.log('ok baby');
 }
 function fecharLogin(){
     login.style.display ='none';
 }
-entre.onclick( function() {
-    inicaLogin();
-});
+ mostrar.onclick = inicarLogin;
 
-feche.onclick(function(){
-    fecharLogin();
-})
+feche.onclick= fecharLogin;

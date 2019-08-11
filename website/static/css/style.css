@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet');
 
 body {
     background-color: #fff;
@@ -271,7 +272,7 @@ footer .footer-card {
 /* ----------------------------------------------login modal */
 
 .login-container {
-    display: none;
+    display:none;
     align-items: center;
     justify-content: center;
     width: 100vw;
@@ -282,12 +283,15 @@ footer .footer-card {
     left: 0px;
     z-index: 2000;
 }
-
+.h2-login{
+    font-family: 'Oleo Script', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: linear-gradient(0, #9D5BB2, #EF698C);
+}
 .login {
-    background: #9D5BB2;
-    background: -webkit-linear-gradient(top left, #9D5BB2, #EF698C);
-    background: -moz-linear-gradient(top left, #9D5BB2, #EF698C);
-    background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
+    background-color: #ffffffd0;
+    color: #3a1a53;
     width: 50%;
     min-width: 300px;
     padding: 40px;
@@ -309,23 +313,40 @@ footer .footer-card {
     }
 }
 
-.mostrar .login {
+.login {
     animation: login .3s;
 }
 
-.fechar {
+.btnfechar {
     position: absolute;
     font-size: 1.2rem;
-    text-align: center;
-    top: -25px;
-    right: -25px;
     width: 40px;
+    right: -25px;
     height: 45px;
-    border-radius: 50%;
+    top: -25px;
     border: 3px solid #EF698C;
+    background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
+    font-family: 'Varela Round', sans-serif;
     color: white;
-    background: #9D5BB2;
+    border-radius: 35px;
+    transition: 0.5s;
+    border-radius: 50%;
+    cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}
+.entrarbtn{
+    background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    align-content: center;
+    border-radius: 35px;
+    transition: 0.5s;
+    margin-top: 15px;
+    cursor: pointer;
+}
+input{
+    height: 30px;
+    box-shadow: 1px 1px 1px 2px #3333333b;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
