@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap" rel="stylesheet');
 
 body {
     background-color: #fff;
@@ -17,7 +16,9 @@ span.logo {
     font-family: cursive;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Roboto Slab', serif;
     color: #3A1A53;
 }
@@ -27,7 +28,7 @@ h2 {
 }
 
 h1 {
-    font-size: 2.5rem;    
+    font-size: 2.5rem;
 }
 
 input {
@@ -96,9 +97,59 @@ header {
     background-position-y: 220px;
     grid-area: header;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ul-resultados {
+    overflow-y: scroll;
+
+}
+
+.resultados {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
+
+.instituicao-container {
+    max-height: 100px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.instituicao-container:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.instituicao-container button {
+    border: 2px solid purple;
+}
+
+span.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span.column {
+    text-align: center;
+
+}
+
+.instituicao-container img {
+    max-height: 70px;
+    max-width: 70px;
+
+}
+
 
 header input {
     font-size: 1.2rem;
@@ -177,27 +228,28 @@ div.items img {
 
 /* -----------------------------------------------------------SECTION CONTATO----------------------------------------------------- */
 
-section.contact {
+section.carrossel {
+    background-color: #5243A9;
     grid-area: scdSection;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.contact .form {
+.carrossel .form {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.contact input,
+.carrossel input,
 button {
     display: inline;
     height: 50px;
     border: none;
 }
 
-.contact input {
+.carrossel input {
     outline-color: #27ae60;
     border-radius: 10px 0px 0px 10px;
     padding-left: 25px;
@@ -205,7 +257,7 @@ button {
     width: 250px;
 }
 
-.contact button {
+.carrossel button {
     cursor: pointer;
     width: 100px;
     margin-left: -10px;
@@ -273,7 +325,7 @@ footer .footer-card {
 
 .login-container {
     background-color: #ffffffd0;
-    display:none;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 100vw;
@@ -284,7 +336,12 @@ footer .footer-card {
     left: 0px;
     z-index: 2000;
 }
-.p-login{
+
+.mostrar{
+    display:flex;
+}
+
+.p-login {
     background: -webkit-linear-gradient(left, #9D5BB2, #EF698C);
     background: linear-gradient(to right, #9D5BB2, #EF698C);
     font-family: 'Oleo Script', cursive;
@@ -293,6 +350,7 @@ footer .footer-card {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 @keyframes login {
     from {
         opacity: 0;
@@ -304,6 +362,7 @@ footer .footer-card {
         transform: translate(0, 0, 0);
     }
 }
+
 .login {
     animation: login .3s;
     background-color: #ffffffd0;
@@ -317,7 +376,8 @@ footer .footer-card {
     box-shadow: 0 0 0 5px #EF698C;
     position: relative;
 }
-.form-login{
+
+.form-login {
     background-color: #ffffffd0;
 }
 
@@ -338,7 +398,8 @@ footer .footer-card {
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
 }
-.entrarbtn{
+
+.entrarbtn {
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
     font-family: 'Varela Round', sans-serif;
     color: white;
@@ -348,7 +409,8 @@ footer .footer-card {
     margin-top: 15px;
     cursor: pointer;
 }
-input{
+
+#modal input {
     height: 30px;
     box-shadow: 1px 1px 1px 2px #3333333b;
     border-radius: 20px;
@@ -409,22 +471,22 @@ input{
 
     /* ----------------------------------------------------------------- */
 
-    section.contact {
+    section.carrossel {
         flex-direction: column;
         padding: 5% 0;
     }
 
-    .contact p {
+    .carrossel p {
         width: 100%;
     }
 
-    .contact.form {
+    .carrossel.form {
         display: flex;
         width: 100%;
         justify-content: center;
     }
 
-    .contact input {
+    .carrossel input {
         text-align: center;
         padding: 0;
         width: 100%;
@@ -436,7 +498,7 @@ input{
         margin-top: 5%;
     }
 
-    .contact button {
+    .carrossel button {
         margin: 0;
         width: 100%;
         border-radius: 0 0 10px 10px;
