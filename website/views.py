@@ -7,8 +7,12 @@ def index(request):
     return render( request, 'index.html', contexto)
 
 def login(request):
-    contexto= {}
+    contexto = {}
     return render( request, 'login.html', contexto)
+
+def agendar(request):
+     contexto = {'mostrar_resultados': True}
+     return render( request, 'index.html', contexto)
 
 # função de cadastrar cliente
 def cadastro(request):
