@@ -272,6 +272,7 @@ footer .footer-card {
 /* ----------------------------------------------login modal */
 
 .login-container {
+    background-color: #ffffffd0;
     display:none;
     align-items: center;
     justify-content: center;
@@ -283,24 +284,15 @@ footer .footer-card {
     left: 0px;
     z-index: 2000;
 }
-.h2-login{
+.p-login{
+    background: -webkit-linear-gradient(left, #9D5BB2, #EF698C);
+    background: linear-gradient(to right, #9D5BB2, #EF698C);
     font-family: 'Oleo Script', cursive;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
-    color: linear-gradient(0, #9D5BB2, #EF698C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.login {
-    background-color: #ffffffd0;
-    color: #3a1a53;
-    width: 50%;
-    min-width: 300px;
-    padding: 40px;
-    border: 0px solid #9D5BB2;
-    border-radius: 20px;
-    box-shadow: 0 0 0 5px #EF698C;
-    position: relative;
-}
-
 @keyframes login {
     from {
         opacity: 0;
@@ -312,9 +304,21 @@ footer .footer-card {
         transform: translate(0, 0, 0);
     }
 }
-
 .login {
     animation: login .3s;
+    background-color: #ffffffd0;
+    font-family: sans-serif;
+    color: #3a1a53;
+    width: 60%;
+    min-width: 300px;
+    padding: 40px;
+    border: 0px solid #9D5BB2;
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px #EF698C;
+    position: relative;
+}
+.form-login{
+    background-color: #ffffffd0;
 }
 
 .btnfechar {
@@ -347,6 +351,7 @@ footer .footer-card {
 input{
     height: 30px;
     box-shadow: 1px 1px 1px 2px #3333333b;
+    border-radius: 20px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
