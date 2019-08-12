@@ -1,10 +1,24 @@
-* {
+/* * {
     border: none;
-}
+} */
 
- body{
-     background-color: #3d3d3d;
-     font-family: sans-serif;
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* background-color: #3d3d3d; */
+}
+body{
+    height: 100%;
+    /* background-color: #3d3d3d; */
+    /*font-family: sans-serif; */
+    margin: 0;
+    padding: 0;
+    background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+    background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
  }
 
  /*------- style do form -----*/
@@ -66,6 +80,56 @@ input, option, select{
     cursor: pointer;
 }
 
+#paciente{
+    display: none;
+}
+#instituicao{
+    display: none;
+}
+
+#formulários{
+    display: none;
+}
+
+#first {
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    /* background-image: url("/static/img/pacient.png"); */
+    border-radius: 100px;
+}
+
+#second {
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+#container{
+    width: 70%;
+    height: 300px;
+    margin-left: 15%;
+    margin-top: 15%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+.caixa {
+    width: 160px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.caixa p{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
 
 /* .button{
     color: #fff;
@@ -149,9 +213,6 @@ form button{
     flex-direction: column;
 }
 
-.caixa {
-    height: 30px;
-}
 
 --------  estilizandos os botoes -------
 
@@ -167,14 +228,7 @@ form button{
     display: none;
 }
 
-#first {
-    background-color: white;
-    background-image: url("/static/img/pacient.png");
-}
 
-#second {
-    background-color: white;
-}
 
 #form.a {
     display: none;
