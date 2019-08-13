@@ -1,25 +1,21 @@
-/* * {
-    border: none;
-} */
-
-html{
+/* html{
     margin: 0;
     padding: 0;
     height: 100%;
-    /* background-color: #3d3d3d; */
-}
+    width: 100%;
+} */
 body{
     height: 100%;
-    /* background-color: #3d3d3d; */
+    /*background-color: #3d3d3d; */
     /*font-family: sans-serif; */
     margin: 0;
     padding: 0;
     background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
     background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
     background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
- }
+    /* background-repeat: no-repeat;  */
+    /* background-size: cover; */
+}
 
  /*------- style do form -----*/
  form{
@@ -81,14 +77,21 @@ input, option, select{
 }
 
 #paciente{
-    display: none;
+    /* display: none; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 #instituicao{
-    display: none;
+    /* display: none; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #formulários{
     display: none;
+    height: 100vh;
 }
 
 #first {
