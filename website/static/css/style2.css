@@ -1,3 +1,6 @@
+* {
+    border: none;
+}
 /* html{
     margin: 0;
     padding: 0;
@@ -81,12 +84,16 @@ input, option, select{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    top: 15%;
+    border-radius: 20px;
 }
 #instituicao{
     /* display: none; */
     display: flex;
     justify-content: space-around;
     align-items: center;
+    top: 15%;
+    border-radius: 20px;
 }
 
 #formulários{
